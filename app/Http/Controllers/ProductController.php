@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use Exception;
 
-use function PHPSTORM_META\map;
 
 class ProductController extends Controller
 {
@@ -15,6 +14,23 @@ class ProductController extends Controller
         return view('template/home', [
             'products' => $product_list
         ]);
+    }
+
+    public function getAllData() {
+        $getAllData = Product::get();
+
+        if($getAllData) {
+            return response([
+                'message' => 'ok',
+                'description' => 'Get Data Success',
+                'data' => $getAllData
+            ], 200);
+        } else {
+            return response([
+                'message' => 'error',
+                'description' => 'Get Data Error'
+            ], 401);
+        }
     }
 
     public function onCreate(Request $req) {   // Create Product Function. (client side)

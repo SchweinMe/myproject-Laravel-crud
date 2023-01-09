@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('p_name');
-            $table->string('p_description')->nullable();
+            $table->string('p_description')->nullable(); // กำหนดเป็นค่าว่างก็ได้ => null
             $table->bigInteger('p_price');
             $table->string('p_category');
 

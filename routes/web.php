@@ -22,3 +22,5 @@ Route::get('/api/getById/{id}', [ProductController::class, 'onEdit']);
 Route::put('/api/update', [ProductController::class, 'onUpdate']);
 
 Route::delete('/api/delete/{id}', [ProductController::class, 'onDelete']);
+
+Route::get('/api/getAllData', [ProductController::class, 'getAllData']);
