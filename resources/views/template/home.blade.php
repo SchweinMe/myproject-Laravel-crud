@@ -231,10 +231,10 @@
                 let updateId = document.getElementById("form-product-update").reset()
             }
 
-/////////////////  JavaScript remove row of table function /////////////////
+/////////////////  JavaScript remove row of table function ///////////////////
         function onRemoveRow() { 
             let getId = document.getElementById('tdid') // get id from data
-            console.log(getId)
+            // console.log(getId)
             let content = getId.closest('.content')
             console.log(content)
             content.remove()
